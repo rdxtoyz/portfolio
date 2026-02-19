@@ -1,0 +1,172 @@
+// ─────────────────────────────────────────────────────
+// Main Stylesheet — Nayan Das Portfolio
+//
+// Global CSS entry loaded via nuxt.config.js `css[]`.
+// NOTE: additionalData in nuxt.config prepends
+//   `@use 'sass:color'; @use 'shared' as *;`
+// to every .scss file (including this one), so all
+// variables, mixins, and sass:color are already available.
+// Do NOT add duplicate @use statements here.
+// ─────────────────────────────────────────────────────
+
+// ── Reset & Base ─────────────────────────────────────
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-body;
+  background-color: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+  min-height: 100dvh;
+}
+
+// ── Typography ──────────────────────────────────────
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.25;
+  color: $color-text;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.125rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  color: $color-muted;
+  line-height: 1.6;
+}
+
+// ── Links ───────────────────────────────────────────
+a {
+  color: $color-text;
+  text-decoration: none;
+  @include transition(color);
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+// ── Code / mono text ────────────────────────────────
+code,
+.mono {
+  font-family: $font-mono;
+  font-size: 0.875rem;
+}
+
+// ── Section spacing ─────────────────────────────────
+.section {
+  padding-bottom: $space-8;
+  border-bottom: 1px solid $color-border;
+  margin-bottom: $space-8;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.section__title {
+  font-family: $font-mono;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: $color-muted;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $space-6;
+}
+
+// ── Container ───────────────────────────────────────
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $space-6 $space-5;
+
+  @include md {
+    padding: $space-8 $space-5;
+  }
+}
+
+// ── Utility ─────────────────────────────────────────
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// ── Skeleton loading state ──────────────────────────
+// Uses color.adjust() — modern replacement for deprecated lighten()
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    $color-surface 25%,
+    color.adjust($color-surface, $lightness: 4%) 50%,
+    $color-surface 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// ── Fade-in animation ───────────────────────────────
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}

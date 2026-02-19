@@ -1,0 +1,5 @@
+# why i ignores those beauty.
+.nuxt/
+.output
+.DS_Store
+node_modules/

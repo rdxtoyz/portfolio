@@ -1,0 +1,38 @@
+// ─────────────────────────────────────────────────────
+// Design Tokens — Nayan Das Portfolio
+// Uses modern @use module system (no deprecated @import).
+// ─────────────────────────────────────────────────────
+
+// ── Color palette ────────────────────────────────────
+$color-bg: #0a0a0a; // near-black background
+$color-surface: #141414; // card / elevated surface
+$color-border: #232323; // subtle border
+$color-text: #ededed; // primary text (off-white)
+$color-muted: #888888; // secondary / muted text
+$color-accent: #3b82f6; // blue accent for links & highlights
+$color-accent-dim: #2563eb; // hover state for accent
+
+// ── Typography ───────────────────────────────────────
+$font-heading: 'Space Grotesk', system-ui, sans-serif;
+$font-body: 'Inter', system-ui, sans-serif;
+$font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+// ── Spacing scale (8 px base) ────────────────────────
+$space-1: 0.25rem; // 4px
+$space-2: 0.5rem; // 8px
+$space-3: 0.75rem; // 12px
+$space-4: 1rem; // 16px
+$space-5: 1.5rem; // 24px
+$space-6: 2rem; // 32px
+$space-7: 3rem; // 48px
+$space-8: 4rem; // 64px
+$space-9: 6rem; // 96px
+
+// ── Layout ───────────────────────────────────────────
+$max-width: 720px;
+$border-radius: 10px;
+
+// ── Breakpoints ──────────────────────────────────────
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
