@@ -2,7 +2,7 @@
 # CI -- Nayan Das Portfolio
 # -----------------------------------------------------------
 # Single workflow that validates code quality on every push
-# and pull request against the main branch.
+# and pull request against the all branch.
 #
 # Steps run sequentially so failures surface in a logical
 # order: format -> test -> build.
@@ -14,9 +14,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
   pull_request:
-    branches: [main]
 
 # Cancel in-progress runs for the same branch / PR
 concurrency:
