@@ -30,6 +30,7 @@ nayan-das-portfolio/
 │       └── useLanguageList.test.js
 ├── app/
 │   ├── app.vue
+│   ├── error.vue
 │   ├── assets/
 │   │   └── scss/
 │   │       ├── _mixins.scss
