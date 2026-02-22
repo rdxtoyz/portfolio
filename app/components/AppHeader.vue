@@ -28,7 +28,9 @@
     <!-- Bio -->
     <!-- Short bio paragraph about who I am and what I do. Soon I add here full details for my job and company I joined -->
     <p class="header__bio">
-      I am RDX, a content creator who makes insightful videos about programming and software development. I build open-source tools and write about code. I am passionate about sharing knowledge and helping others learn and grow in their coding journey.
+      I am RDX, a content creator who makes insightful videos about programming and software
+      development. I build open-source tools and write about code. I am passionate about sharing
+      knowledge and helping others learn and grow in their coding journey.
     </p>
   </header>
 </template>
