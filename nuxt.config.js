@@ -97,7 +97,7 @@ export default defineNuxtConfig({
   },
 
   /* ── Modules ────────────────────────────────────── */
-  modules: [''],
+  modules: [],
 
   /* ── Compatibility date (required by Nuxt 4) ───── */
   compatibilityDate: '2025-01-01',
