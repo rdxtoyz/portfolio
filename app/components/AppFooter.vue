@@ -6,8 +6,8 @@
   <footer class="footer fade-up">
     <p class="footer__copy">
       &copy; {{ year }}
-      <a href="https://github.com/nayandas69" target="_blank" rel="noopener noreferrer">
-        Nayan Das
+      <a href="https://github.com/rdxtoyz" target="_blank" rel="noopener noreferrer">
+        RDX
       </a>
       &nbsp;&middot;&nbsp; Source code on
       <a

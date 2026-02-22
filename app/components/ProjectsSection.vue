@@ -29,7 +29,7 @@
 
     <!-- View all link -->
     <a
-      href="https://github.com/nayandas69?tab=repositories"
+      href="https://github.com/rdxtoyz?tab=repositories"
       class="projects__all"
       target="_blank"
       rel="noopener noreferrer"
@@ -47,7 +47,7 @@
    * Fetch 6 most recently pushed public repos.
    * useGithubRepos is auto-imported from ~/composables/
    */
-  const { repos, loading, error } = useGithubRepos('nayandas69', 6);
+  const { repos, loading, error } = useGithubRepos('rdxtoyz', 6);
 </script>
 
 <style lang="scss" scoped>
