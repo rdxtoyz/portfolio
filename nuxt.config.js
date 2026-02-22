@@ -73,7 +73,7 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/png',
-          href: 'https://avatars.githubusercontent.com/u/174907517?v=4&size=64',
+          href: 'https://avatars.githubusercontent.com/u/231478862?v=4&size=64',
         },
         /* Google Fonts — Space Grotesk (headings) + Inter (body) + JetBrains Mono (code) */
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
