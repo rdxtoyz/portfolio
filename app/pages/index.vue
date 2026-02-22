@@ -25,12 +25,12 @@
    * useHead is auto-imported by Nuxt 3.
    */
   useHead({
-    title: 'Nayan Das — Developer & Creator',
+    title: 'RDX — Developer & Creator',
     meta: [
       {
         name: 'description',
         content:
-          'Portfolio of Nayan Das — a developer and creator who builds open-source tools and writes about code.',
+          'Portfolio of RDX — a developer and creator who builds open-source tools and writes about code.',
       },
       { property: 'og:image', content: 'https://nayan-das-portfolio-navy.vercel.app/look.png' },
     ],

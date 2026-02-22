@@ -6,7 +6,7 @@
 <template>
   <header class="header fade-up">
     <!-- Name -->
-    <h1 class="header__name">nayan das</h1>
+    <h1 class="header__name">RDX</h1>
 
     <!-- Social links row -->
     <nav class="header__nav" aria-label="Social links">
@@ -28,9 +28,7 @@
     <!-- Bio -->
     <!-- Short bio paragraph about who I am and what I do. Soon I add here full details for my job and company I joined -->
     <p class="header__bio">
-      I am a developer and creator who builds open-source tools, side projects, and writes about
-      code. I enjoy crafting software that solves real problems and sharing what I learn along the
-      way. I joined a gaming company as Backend Leader, which is a fun new adventure!
+      I am RDX, a content creator who makes insightful videos about programming and software development. I build open-source tools and write about code. I am passionate about sharing knowledge and helping others learn and grow in their coding journey.
     </p>
   </header>
 </template>
@@ -47,22 +45,12 @@
   const socials = [
     {
       label: 'github',
-      url: 'https://github.com/nayandas69',
+      url: 'https://github.com/rdxtoyz',
       icon: IconGithub,
     },
     {
-      label: 'x',
-      url: 'https://x.com/nayandas69',
-      icon: IconX,
-    },
-    {
-      label: 'discord',
-      url: 'https://discord.gg/u9XfHZN8K9',
-      icon: IconDiscord,
-    },
-    {
       label: 'email',
-      url: 'mailto:nayanchandradas@hotmail.com',
+      url: 'mailto:rdxtoyz@proton.me',
       icon: IconMail,
     },
   ];
