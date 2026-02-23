@@ -59,6 +59,20 @@ pnpm test
 
 vitest handles it, we good.
 
+### wanna dockerize it?
+
+build the image:
+```bash
+docker build -t nayan-portfolio .
+```
+
+run the container:
+```bash
+docker run -p 3000:3000 nayan-portfolio  #run the container and map port 3000
+```
+
+the docker will start the lics server and you can access the portfolio at `http://localhost:3000` in your browser. easy peasy.
+
 ### wanna read more?
 
 i wrote a whole detailed blog post about how i built this thing — check it on my [BlogVerse](https://blogverse-five-omega.vercel.app/blog/building-my-developer-portfolio-with-nuxt-4) when it drops. or just fork [blogverse](https://github.com/nayandas69/blogverse) and start your own blog, it's all open source baby 🤙
