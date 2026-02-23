@@ -1,0 +1,24 @@
+# let's ignore spcial beauty files
+node_modules
+.pnpm-store
+.output
+.nuxt
+dist
+__tests__
+coverage
+vitest.config.ts
+.git
+.github
+.gitattributes
+.vscode
+.idea
+.DS_Store
+README*
+CLICK-ME.md
+structure.md
+LICENSE
+.nuxtrc
+.node-version
+.prettier*
+.gitignore
+pnpm-workspace.yaml
