@@ -10,6 +10,8 @@ nayan-das-portfolio/
 ├── .nuxtrc
 ├── .prettierignore
 ├── .prettierrc.json
+├── .dockerignore
+├── Dockerfile
 ├── LICENSE
 ├── README
 ├── CLICK-ME.md
