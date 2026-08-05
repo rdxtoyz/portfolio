@@ -9,28 +9,26 @@
     <AppHeader />
 
     <!-- Projects: auto-fetched GitHub repos in card grid -->
-    <ProjectsSection />
+    <ProjectsSection class="motion-blur delay-400" />
 
     <!-- Articles: auto-fetched blog posts from Blogverse API -->
-    <ArticlesSection />
-
-    <!-- Footer: copyright + colophon -->
-    <AppFooter />
+    <ArticlesSection class="motion-blur delay-500" />
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
+  const { profile } = useAppConfig();
+
   /**
    * SEO meta tags for the homepage.
    * useHead is auto-imported by Nuxt 3.
    */
   useHead({
-    title: 'Nayan Das — Developer & Creator',
+    title: `${profile.name} — Developer & Creator`,
     meta: [
       {
         name: 'description',
-        content:
-          'Portfolio of Nayan Das — a developer and creator who builds open-source tools and writes about code.',
+        content: `Portfolio of ${profile.name} — a developer and creator who builds open-source tools and writes about code.`,
       },
       { property: 'og:image', content: 'https://nayan-das-portfolio-navy.vercel.app/look.png' },
     ],

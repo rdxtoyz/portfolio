@@ -44,7 +44,8 @@
   </a>
 </template>
 
-<script setup>
+<script setup lang="ts">
+  import type { GithubRepo } from '~/types';
   import IconRepo from '~/components/icons/IconRepo.vue';
   import IconStar from '~/components/icons/IconStar.vue';
   import IconFork from '~/components/icons/IconFork.vue';
@@ -52,13 +53,10 @@
   /* Pull the full language-color map from the shared composable */
   const { langColor } = useLanguageList();
 
-  defineProps({
+  defineProps<{
     /** Repository object from useGithubRepos composable */
-    repo: {
-      type: Object,
-      required: true,
-    },
-  });
+    repo: GithubRepo;
+  }>();
 </script>
 
 <style lang="scss" scoped>
@@ -68,6 +66,8 @@
     flex-direction: column;
     gap: $space-3;
     padding: $space-5;
+    min-width: 0;
+    overflow: hidden;
     @include transition(border-color);
     text-decoration: none;
     color: inherit;
@@ -83,6 +83,7 @@
     display: flex;
     align-items: center;
     gap: $space-2;
+    min-width: 0;
   }
 
   .project-card__icon {
@@ -118,7 +119,9 @@
     font-size: 0.8125rem;
     color: $color-muted;
     line-height: 1.5;
-    @include line-clamp(2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     flex: 1;
   }
 

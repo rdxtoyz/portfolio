@@ -5,6 +5,7 @@
  * SCSS globals injected via Vite preprocessorOptions.
  * Vercel-compatible SSR deployment.
  */
+import { defineNuxtConfig } from 'nuxt/config';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -33,10 +34,10 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern-compiler',
+          api: 'modern-compiler' as const,
           loadPaths: [scssDir],
           additionalData: `@use 'sass:color'; @use 'shared' as *;`,
-        },
+        } as Record<string, unknown>,
       },
     },
   },
@@ -85,8 +86,6 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap',
-          media: 'print',
-          onload: "this.media='all'",
         },
         /* DNS prefetch for API domains — resolves DNS early */
         { rel: 'dns-prefetch', href: 'https://api.github.com' },
@@ -97,7 +96,26 @@ export default defineNuxtConfig({
   },
 
   /* ── Modules ────────────────────────────────────── */
-  modules: ['@nuxt/test-utils/module'],
+  modules: ['@nuxt/test-utils/module', '@nuxtjs/sitemap', '@nuxt/image'],
+
+  /* ── Site URL for sitemap generation ────────────── */
+  // @ts-ignore - 'site' property from @nuxtjs/sitemap
+  site: {
+    url: 'https://nayan-das-portfolio-navy.vercel.app',
+  },
+
+  /* ── Route Rules for Full SSR ────────────────────── */
+  routeRules: {
+    // All routes use SSR (no static generation)
+    '/**': { ssr: true },
+  },
+
+  /* ── Sitemap Configuration ───────────────────────── */
+  sitemap: {
+    zeroRuntime: true,
+    discoverImages: true,
+    autoLastmod: true,
+  },
 
   /* ── Compatibility date (required by Nuxt 4) ───── */
   compatibilityDate: '2025-01-01',

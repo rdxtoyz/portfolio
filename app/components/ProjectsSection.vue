@@ -40,7 +40,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import IconArrow from '~/components/icons/IconArrow.vue';
 
   /**
@@ -58,7 +58,7 @@
     gap: $space-4;
 
     @include sm {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 

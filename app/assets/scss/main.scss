@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────
 // Main Stylesheet — Nayan Das Portfolio
 //
-// Global CSS entry loaded via nuxt.config.js `css[]`.
+// Global CSS entry loaded via nuxt.config.ts `css[]`.
 // NOTE: additionalData in nuxt.config prepends
 //   `@use 'sass:color'; @use 'shared' as *;`
 // to every .scss file (including this one), so all
@@ -31,6 +31,19 @@ body {
   color: $color-text;
   line-height: 1.6;
   min-height: 100dvh;
+
+  // Basic fade-in to clear the opacity:0 set in nuxt.config.ts
+  animation: bodyFadeIn 0.3s ease-out forwards;
+  will-change: opacity;
+}
+
+@keyframes bodyFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 // ── Typography ──────────────────────────────────────
@@ -169,4 +182,80 @@ code,
 
 .fade-up {
   animation: fadeUp 0.5s ease forwards;
+}
+
+// ── Staggered Motion Blur Reveal (VueUse Motion style) ─────
+@keyframes motionBlurReveal {
+  from {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+.motion-blur {
+  animation: motionBlurReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, filter, opacity;
+}
+
+// ── Elegant Fade Up Animation (About Page) ─────────────────
+@keyframes elegantFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.elegant-fade-up {
+  animation: elegantFadeUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  will-change: transform, opacity;
+}
+
+// ── Horizontal Slide In Animations (Gallery Page) ────────────
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  will-change: transform, opacity;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  will-change: transform, opacity;
+}
+
+// Generate delay classes (.delay-100, .delay-200, etc.)
+@for $i from 1 through 15 {
+  .delay-#{$i * 100} {
+    animation-delay: #{$i * 0.1}s;
+  }
 }

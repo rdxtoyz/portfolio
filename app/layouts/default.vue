@@ -4,17 +4,29 @@
 -->
 <template>
   <div class="layout">
-    <div class="container">
+    <div class="container main-content">
       <!-- Page content injected here -->
       <slot />
+
+      <!-- Global Footer -->
+      <AppFooter />
     </div>
+
+    <!-- Floating Bottom Navigation -->
+    <AppNavbar />
   </div>
 </template>
+
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
   .layout {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
+  }
+
+  .main-content {
+    padding-bottom: $space-9; // Space for the floating capsule navbar
   }
 </style>
